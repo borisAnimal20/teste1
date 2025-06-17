@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios de Matemática – 5º Ano</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaf6ff;
+      text-align: center;
+      padding: 40px;
+    }
+    .exercicio {
+      background-color: white;
+      padding: 20px;
+      margin: auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      margin-top: 10px;
+      padding: 8px;
+      font-size: 16px;
+    }
+    .resultado {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .download {
+      margin-top: 30px;
+    }
+    a.download-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    a.download-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exercícios de Matemática – 5º Ano</h1>
+
+  <div class="exercicio">
+    <p><strong>Quanto é 7 × 8?</strong></p>
+    <input type="number" id="resposta" placeholder="Digite sua resposta">
+    <br>
+    <button onclick="verificar()">Verificar</button>
+    <p class="resultado" id="feedback"></p>
+  </div>
+
+  <div class="download">
+    <h2>Baixar exercício em PDF</h2>
+    <a class="download-link" href="arquivos/exercicio1.pdf" download>📄 Baixar PDF</a>
+  </div>
+
+  <script>
+    function verificar() {
+      var resposta = document.getElementById("resposta").value;
+      var feedback = document.getElementById("feedback");
+
+      if (resposta == 56) {
+        feedback.textContent = "✅ Correto!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "❌ Tente novamente!";
+        feedback.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
